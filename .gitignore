@@ -1,0 +1,13 @@
+/env
+/.flask_session
+
+# Ignore Git's internal files
+.git/
+*.idx
+*.pack
+*.rev
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo

@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="static/icon-big.svg" alt="ParaboLab Logo">
+  <img src="static/svg/icon-big.svg" alt="ParaboLab Logo" width="300px">
 </p>
 
 # Description
@@ -9,6 +9,6 @@ ParaboLab is an interactive projectile motion simulator that allows users to inp
 
 # Features
 - Input initial velocity and angle.
+- Select the gravity value for the simulation.
 - Visualize the projectile's trajectory.
-- Calculate maximum distance and flight time.
-
+- Calculate maximum distance, flight time, and other projectile characteristics.

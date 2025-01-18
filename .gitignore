@@ -1,5 +1,6 @@
 /env
 /.flask_session
+/static/svg
 
 # Ignore Git's internal files
 .git/

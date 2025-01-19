@@ -31,12 +31,12 @@
         {% if showForm==True %}
 
             <form action="/calculator" method="POST">
-                <p>Enter the initial parameters</p>
+                <h2>Enter the initial parameters</h2>
 
-                <svg width="1440" height="2" viewBox="0 0 1440 2" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1H1440" stroke="currentColor"/>
-                </svg>         
-                                        
+                <svg viewBox="0 0 1440 10" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 5H1440" stroke="currentColor" stroke-width="3"/>
+                </svg> 
+
                 <div class="input-group">
                     <div class="input-field">
                         <label for="angle">Angle of throw (degrees)</label>
@@ -66,48 +66,56 @@
 
             <section>
                 <h2>Simulation</h2>
-                <svg width="1440" height="2" viewBox="0 0 1440 2" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1H1440" stroke="currentColor"/>
-                </svg> 
-                <div class="image"></div>
             </section>
 
             <aside>
                 <h2>Parameters</h2>
-                <svg width="1440" height="2" viewBox="0 0 1440 2" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1H1440" stroke="currentColor"/>
-                </svg> 
 
-                <article>
-                    <label for="angle">Angle of throw (degrees)</label>
-                    <p>{{ results['angle'] }}</p>
-                </article>
-                
-                <article>
-                    <label for="velocity">Velocity of throw (m/s)</label>
-                    <p>{{ results['velocity'] }}</p>
-                </article>
-                
-                <article>
-                    <label for="gravity">Gravity (m/s²)</label>
-                    <p>{{ results['gravity'] }}</p>
-                </article>
-                
-                <article>
-                    <label for="distance">Distance (m)</label>
-                    <p>{{ results['distance'] }}</p>
-                </article>
-                
-                <article>
-                    <label for="max_height">Maximum Height (m)</label>
-                    <p>{{ results['max_height'] }}</p>
-                </article>
-                
-                <article>
-                    <label for="time">Time of Flight (s)</label>
-                    <p>{{ results['time'] }}</p>
-                </article>
-                
+                <div class="parameters">
+
+                    <article>
+                        <label for="angle">Angle of throw (degrees)</label>
+                        <div class="parameter">
+                            <p>{{ results['angle'] }}</p>
+                        </div>
+                    </article>
+                    
+                    <article>
+                        <label for="velocity">Velocity of throw (m/s)</label>
+                        <div class="parameter">
+                            <p>{{ results['velocity'] }}</p>
+                        </div>
+                    </article>
+                    
+                    <article>
+                        <label for="gravity">Gravity (m/s²)</label>
+                        <div class="parameter">
+                            <p>{{ results['gravity'] }}</p>
+                        </div>
+                    </article>
+                    
+                    <article>
+                        <label for="distance">Distance (m)</label>
+                        <div class="parameter">
+                            <p>{{ results['distance'] }}</p>
+                        </div>
+                    </article>
+                    
+                    <article>
+                        <label for="max_height">Maximum Height (m)</label>
+                        <div class="parameter">
+                            <p>{{ results['max_height'] }}</p>
+                        </div>
+                    </article>
+                    
+                    <article>
+                        <label for="time">Time of Flight (s)</label>
+                        <div class="parameter">
+                            <p>{{ results['time'] }}</p>
+                        </div>
+                    </article>
+
+                </div>
 
             </aside>
         

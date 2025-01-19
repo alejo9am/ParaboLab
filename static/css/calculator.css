@@ -18,32 +18,34 @@ body {
         align-items: center;
 
         width: 100%;
-        height: 120px;
+        height: 17vh;
 
         background-color: var(--background-dark);
 
         & a {
-            width: 25%;
-            margin: 45px 0 45px 0;
+            width: 23%;
+            min-width: 250px;
         }
 
     }
 
     & main {
 
-        width: 80%;
+        height: 83vh;
+        width: 100%;
+        padding: 0 15%;
 
-        flex-grow: 1;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        gap: 60px;
+        gap: 10%;
 
         & form {
 
             height: 65%;
             width: 30%;
+            min-width: 350px;
 
             display: flex;
             justify-content: space-evenly;
@@ -53,17 +55,18 @@ body {
             background-color: #19becf11;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
             backdrop-filter: blur( 2px );
-            border-radius: 10px;
+            border-radius: 0.7rem;
 
             color: var(--black);
 
-            & p {
-                font-size: 1.5rem;
-                font-weight: 600;
+            & h2{
+                font-weight: 500;
+                font-size: 1.3rem;
             }
 
             & svg {
                 width: 100%;
+                height: 3px;
             }
 
             .input-group{
@@ -74,21 +77,21 @@ body {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                gap: 10px;
+                gap: 0.7rem;
 
                 .input-field{
                     width: 100%;
 
                     & input, & select{
                         width: 100%;
-                        height: 40px;
-                        padding-left: 7px;
+                        height: 2rem;
     
                         background-color: transparent;
-                        border-radius: 5px;
+                        border-radius: 0.4rem;
                         border: 1px solid var(--background-dark);
     
                         font-size: 1rem;
+                        font-weight: 300;
 
                         transition: border 0.3s;
 
@@ -101,8 +104,13 @@ body {
                         }
                     }
 
-                    & label{
-                        padding-left: 7px;
+                    & label {
+                        font-weight: 400;
+                        width: 100%;
+                    }
+
+                    & label, & select, & input {
+                        padding-left: 0.5rem;
                     }
 
                 }
@@ -110,15 +118,15 @@ body {
             }
 
             & button {
-                width: 30%;
-                height: 40px;
-                margin: 20px 0 20px 0;
+                width: 34%;
+                height: 12%;
 
                 background-color: var(--secondary-color);
                 color: var(--white);
                 border: none;
-                border-radius: 5px;
-                font-size: 1.2rem;
+                border-radius: 0.4rem;
+                font-size: 1.1rem;
+                font-weight: 500;
 
                 cursor: pointer;
                 transition: scale 0.3s;
@@ -136,68 +144,80 @@ body {
 
         & section, & aside {
 
-            height: 80%;
+            height: 85%;
 
             background-color: #19becf11;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
             backdrop-filter: blur( 2px );
-            border-radius: 10px;
+            border-radius: 0.7rem;
 
             color: var(--black);
 
             & h2{
                 font-weight: 600;
+                color: var(--secondary-color);
             }
 
-            & svg {
-                width: 100%;
-            }
         }
 
         & section {
-            flex-grow: 2;
+
+            width: 55%;
+            padding-top: 1rem;
 
             display: flex;
-            justify-content: space-evenly;
+            justify-content: start;
             align-items: center;
             flex-direction: column;
 
-            .image{
-                width: 500px;
-                height: 400px;
-                background-color: white;
-            }
         }
 
         & aside {
-            width: 30%;
+            width: 35%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
 
             display: flex;
-            justify-content: space-evenly;
+            justify-content: start;
             align-items: center;
             flex-direction: column;
 
-            & article {
+            & .parameters {
+
                 width: 80%;
 
+                flex-grow: 1;
                 display: flex;
-                align-items: start;
+                justify-content: space-evenly;
+                align-items: center;
                 flex-direction: column;
-                gap: 5px;
 
-                & label{
-                    font-weight: 500;
-                }
-
-                & p {
-                    height: 30px;
+                & article {
                     width: 100%;
-                    padding-left: 7px;
-
-
-                    border: 1px solid var(--background-dark);
-                    border-radius: 10px;
+    
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    gap: 0.2rem;
+    
+                    & label{
+                        font-weight: 500;
+                        font-size: 1rem;
+                    }
+    
+                    & .parameter {
+                        height: 2rem;
+                        width: 100%;
+                        padding-left: 0.5rem;
+    
+                        display: flex;
+                        align-items: center;
+    
+                        border: 1px solid var(--background-dark);
+                        border-radius: 10px;
+                    }
                 }
+
             }
 
         }

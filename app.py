@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-from src import functions as f
+from src.physics import calculate as calculate_params
 
 app = Flask(__name__)
 
@@ -22,7 +22,7 @@ def calculator_process():
         velocity = float(request.form['velocity'])
         gravity = float(request.form['gravity'])
 
-        results = f.calculate(angle, velocity, gravity)
+        results = calculate_params(angle, velocity, gravity)
 
     return render_template('calculator.html', showForm=showForm, results=results)
 

@@ -40,11 +40,11 @@
                 <div class="input-group">
                     <div class="input-field">
                         <label for="angle">Angle of throw (degrees)</label>
-                        <input type="number" step="any" name="angle" autocomplete="off" required>
+                        <input type="number" step="any" name="angle" value="{{params['angle']}}" autocomplete="off" required>
                     </div>
                     <div class="input-field">
                         <label for="velocity">Velocity of throw (m/s)</label>
-                        <input type="number" step="any" name="velocity" autocomplete="off" required>
+                        <input type="number" step="any" name="velocity" value="{{params['velocity']}}" autocomplete="off" required>
                     </div>
                     <div class="input-field">
                         <label for="gravity">Gravity</label>
@@ -66,56 +66,69 @@
 
             <section>
                 <h2>Simulation</h2>
+
+                <img src="data:image/png;base64,{{ image }}" alt="Generated chart">
+
             </section>
 
             <aside>
                 <h2>Parameters</h2>
 
-                <div class="parameters">
+                <div class="info">
 
-                    <article>
-                        <label for="angle">Angle of throw (degrees)</label>
-                        <div class="parameter">
-                            <p>{{ results['angle'] }}</p>
-                        </div>
-                    </article>
-                    
-                    <article>
-                        <label for="velocity">Velocity of throw (m/s)</label>
-                        <div class="parameter">
-                            <p>{{ results['velocity'] }}</p>
-                        </div>
-                    </article>
-                    
-                    <article>
-                        <label for="gravity">Gravity (m/s²)</label>
-                        <div class="parameter">
-                            <p>{{ results['gravity'] }}</p>
-                        </div>
-                    </article>
-                    
-                    <article>
-                        <label for="distance">Distance (m)</label>
-                        <div class="parameter">
-                            <p>{{ results['distance'] }}</p>
-                        </div>
-                    </article>
-                    
-                    <article>
-                        <label for="max_height">Maximum Height (m)</label>
-                        <div class="parameter">
-                            <p>{{ results['max_height'] }}</p>
-                        </div>
-                    </article>
-                    
-                    <article>
-                        <label for="time">Time of Flight (s)</label>
-                        <div class="parameter">
-                            <p>{{ results['time'] }}</p>
-                        </div>
-                    </article>
+                    <div class="parameters">
+
+                        <article>
+                            <label for="angle">Angle (degrees)</label>
+                            <div class="parameter">
+                                <p>{{ results['angle'] }}</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <label for="velocity">Velocity of throw (m/s)</label>
+                            <div class="parameter">
+                                <p>{{ results['velocity'] }}</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <label for="gravity">Gravity (m/s²)</label>
+                            <div class="parameter">
+                                <p>{{ results['gravity'] }}</p>
+                            </div>
+                        </article>
+    
+                    </div>
+    
+                    <div class="results">
+    
+                        <article>
+                            <label for="distance">Distance (m)</label>
+                            <div class="parameter">
+                                <p>{{ results['distance'] }}</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <label for="max_height">Maximum Height (m)</label>
+                            <div class="parameter">
+                                <p>{{ results['max_height'] }}</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <label for="time">Time of Flight (s)</label>
+                            <div class="parameter">
+                                <p>{{ results['time'] }}</p>
+                            </div>
+                        </article>
+    
+                    </div>
 
                 </div>
+
+                <a href="/calculator?angle={{results['angle']}}&velocity={{results['velocity']}}">Change parameters</a>
 
             </aside>
         
